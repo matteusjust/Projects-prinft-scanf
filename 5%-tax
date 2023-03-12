@@ -1,0 +1,17 @@
+/*Allows the user to enter calculate a 5% tax on any amout of money*/
+
+#include <stdio.h> 
+
+#define TAX 5.0/100.0
+
+int main(void)
+{
+    float dollars;
+    
+    printf ("Enter the desired amount of money ");
+    scanf ("%f", &dollars);
+    
+    printf ("The total ammout is: %.2f\n ", dollars + (dollars * TAX));
+    
+    return 0;
+}
