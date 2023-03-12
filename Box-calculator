@@ -1,0 +1,22 @@
+/* Computes the weight of boxes,very original program*/
+
+#include <stdio.h>
+
+int main(void)
+{
+    int heigth, length, width, volume, weight;
+
+    printf ("Enter height of box: ");
+    scanf ("%d", &heigth);
+    printf ("Enter length of the box: ");
+    scanf ("%d", &length);
+    printf ("Enter width of the box: ");
+    scanf ("%d", &width);
+    volume = heigth * length * width;
+    weight = (volume + 165) / 166;
+
+    printf ("Volume: %d\n", volume);
+    printf ("Dimensional weight: %d\n", weight);
+
+    return 0;
+}
