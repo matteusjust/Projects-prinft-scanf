@@ -1,0 +1,31 @@
+/* Enter a certain amount of money and discover how many bills you need*/
+
+#include <stdio.h>
+
+int main(void)
+{
+    int money, bills;
+    
+    printf ("Enter an amount of money: ");
+    scanf ("%d", &money);
+    
+    bills = money/20;
+    printf ("$ 20 bills: %d\n", bills);
+    
+    money = money - (bills * 20);
+    
+    bills = money / 10;
+    printf ("$ 10 bills: %d\n", bills); 
+    
+    money = money - (bills * 10);
+    
+    bills = money / 5;
+    printf ("$ 5 bills: %d\n", bills);
+    
+    money = money - (bills * 5); 
+    
+    bills = money / 1;
+    printf ("$ 1 bills: %d\n", bills);
+    
+    return 0;
+}
