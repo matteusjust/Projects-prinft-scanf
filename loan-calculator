@@ -1,0 +1,30 @@
+/* Calculates 3 payments of a loan, including interest rate*/
+
+#include <stdio.h>
+
+int main(void)
+{
+    float loan, ir, mir, mp, balance;
+    
+    printf ("Enter the amount of loan: "); 
+    scanf ("%f", &loan); /*number of loan*/
+    
+    printf ("Enter the interest rate: ");
+    scanf ("%f", &ir); /* number of interest rate*/
+    
+    printf ("Enter monthly payement: ");
+    scanf ("%f", &mp); /* number of monthly payement*/
+    
+    mir = (ir/100) / 12; /* monthly interest rate*/
+    
+    balance = (loan - mp) + (loan * mir); 
+    printf ("The balance of the first month is: %.2f\n", balance); /*first monnth balance */
+    
+    balance = (balance - mp) + (balance * mir);
+    printf ("The balance of the second month is: %.2f\n", balance); /* second month balance*/
+    
+    balance = (balance - mp) + (balance * mir);
+    printf ("The balance of the third month is: %.2f\n", balance); /* third month balance*/
+    
+    return 0;
+}
